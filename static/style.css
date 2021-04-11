@@ -1,0 +1,140 @@
+/**font-family: 'Lexend Deca', sans-serif; , font-family: 'Big Shoulders Display', cursive;**/
+/**
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+
+- Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
+- Weights: 700
+**/
+body{
+  margin: 0px;
+  background-color: hsl(0, 0%, 95%);
+}
+#container{
+  display: grid;
+  grid-template-columns: repeat(3, calc(100% / 3));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 820px;
+  padding: 0px;
+}
+#container #sedans{
+  background-color: hsl(31, 77%, 52%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+#container #suvs{
+  background-color: hsl(184, 100%, 22%);
+}
+#container #luxury{
+  background-color: hsl(179, 100%, 13%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+#container .card{
+  padding: 50px 25px 25px 25px;
+}
+#container .card h1{
+  font-family: 'Big Shoulders Display', cursive;
+  color: hsl(0, 0%, 95%);
+  text-transform: uppercase;
+}
+#container .card p{
+  font-family: 'Lexend Deca', sans-serif;
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-bottom: 70px;
+}
+#container .card button{
+  display: block;
+  outline: none;
+  width: 130px;
+  height: 30px;
+  font-family: 'Lexend Deca', sans-serif;
+  border-radius: 15px;
+  cursor: pointer;
+}
+#container #sedans button{
+  border: 2px solid hsla(0, 0%, 100%, 0.75);
+  background-color: hsla(0, 0%, 100%, 0.75);
+  color: hsl(31, 77%, 52%);
+}
+#container #sedans button:hover{
+  border: 2px solid hsla(0, 0%, 100%, 0.75);
+  background-color: hsl(31, 77%, 52%);
+  color: hsla(0, 0%, 100%, 0.75);
+}
+#container #suvs button{
+  border: 2px solid hsla(0, 0%, 100%, 0.75);
+  background-color: hsla(0, 0%, 100%, 0.75);
+  color: hsl(184, 100%, 22%);
+}
+#container #suvs button:hover{
+  border: 2px solid hsla(0, 0%, 100%, 0.75);
+  background-color: hsl(184, 100%, 22%);
+  color: hsla(0, 0%, 100%, 0.75);
+}
+#container #luxury button{
+  border: 2px solid hsla(0, 0%, 100%, 0.75);
+  background-color: hsla(0, 0%, 100%, 0.75);
+  color: hsl(179, 100%, 13%);
+}
+#container #luxury button:hover{
+  border: 2px solid hsla(0, 0%, 100%, 0.75);
+  background-color: hsl(179, 100%, 13%);
+  color: hsla(0, 0%, 100%, 0.75);
+}
+@media (max-width: 800px){
+  #container{
+    display: block;
+    margin: 50px auto 50px auto;
+    max-width: 80%;
+    position: static;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    grid-template-columns: 273.33px;
+    grid-template-rows: repeat(3, calc(100% / 3));
+  }
+  #container #sedans{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+  }
+  #container #luxury{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 0px;
+  }
+}
